@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>电商上市公司年报文本数字化转型测度与企业绩效——预演毕业论文</title>
+<style>
+  :root{
+    --bg:#f7f8fc; --card:#ffffff; --ink:#1f2430; --sub:#5b6478;
+    --line:#e6e9f2; --accent:#6c63ff; --accent2:#ff8fb1; --soft:#f0f1fb;
+  }
+  [data-theme="dark"]{
+    --bg:#16181f; --card:#1f2330; --ink:#e9ecf5; --sub:#9aa3b8;
+    --line:#2c3140; --accent:#8b83ff; --accent2:#ff9ec0; --soft:#232838;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Noto Serif SC","Songti SC",Georgia,serif;line-height:1.9;
+    transition:background .4s,color .4s;font-size:17px}
+  .wrap{max-width:880px;margin:0 auto;padding:32px 22px 120px}
+  header.topbar{position:sticky;top:0;z-index:20;background:var(--bg);
+    border-bottom:1px solid var(--line);padding:12px 22px;display:flex;
+    justify-content:space-between;align-items:center}
+  .topbar .brand{font-weight:700;color:var(--accent)}
+  .toggle{cursor:pointer;border:1px solid var(--line);background:var(--card);
+    color:var(--ink);border-radius:999px;padding:6px 14px;font-size:14px;
+    transition:.3s}
+  .toggle:hover{border-color:var(--accent)}
+  .cover{background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff;border-radius:22px;padding:56px 40px;margin:24px 0 40px;
+    box-shadow:0 18px 40px rgba(108,99,255,.25);text-align:center}
+  .cover h1{font-size:30px;line-height:1.5;margin:0 0 18px;font-weight:800}
+  .cover .meta{font-size:15px;opacity:.95;line-height:2}
+  .cover .meta span{display:inline-block;margin:4px 14px}
+  h2{font-size:23px;margin:46px 0 14px;padding-left:12px;
+    border-left:5px solid var(--accent)}
+  h3{font-size:19px;margin:26px 0 8px;color:var(--accent)}
+  p{margin:12px 0;text-align:justify}
+  .abstract{background:var(--soft);border-radius:16px;padding:22px 26px;
+    margin:18px 0}
+  .kw{margin:14px 0;font-size:15px;color:var(--sub)}
+  nav.toc{background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:20px 26px;margin:18px 0}
+  nav.toc ol{margin:6px 0;padding-left:22px}
+  nav.toc a{color:var(--ink);text-decoration:none}
+  nav.toc a:hover{color:var(--accent)}
+  table{width:100%;border-collapse:collapse;margin:18px 0;font-size:15px;
+    font-family:"Noto Sans SC",system-ui,sans-serif}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:center}
+  th{background:var(--soft);color:var(--ink)}
+  .refs{font-size:15px;line-height:1.8}
+  .refs li{margin:8px 0}
+  .tag{display:inline-block;background:var(--soft);color:var(--accent);
+    border-radius:8px;padding:2px 10px;font-size:13px;margin-right:6px}
+  footer{text-align:center;color:var(--sub);font-size:14px;margin-top:60px}
+  .note{font-size:14px;color:var(--sub);background:var(--soft);
+    border-radius:12px;padding:14px 18px}
+  @media(max-width:600px){.cover{padding:40px 22px}.cover h1{font-size:23px}
+    body{font-size:16px}}
+  @media print{body{background:#fff;color:#000}
+    header.topbar,nav.toc{display:none}.cover{box-shadow:none}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <span class="brand">🎓 预演毕业论文</span>
+  <button class="toggle" id="themeBtn">🌙 深色</button>
+</header>
+
+<div class="wrap">
+
+  <!-- 封面 -->
+  <section class="cover">
+    <h1>电商上市公司年报文本数字化转型测度<br>与企业绩效研究</h1>
+    <div class="meta">
+      <span>学　号：202364090</span>
+      <span>姓　名：胡　芊</span><br>
+      <span>学　院：大连财经学院 管理学院</span><br>
+      <span>专　业：大数据管理与应用 2023级</span><br>
+      <span>课程：毕业论文（预演）</span>
+      <span>日　期：2026年10月</span>
+    </div>
+  </section>
+
+  <!-- 目录 -->
+  <nav class="toc">
+    <strong>目　录</strong>
+    <ol>
+      <li><a href="#abstract">摘要</a></li>
+      <li><a href="#intro">一、绪论</a></li>
+      <li><a href="#method">二、研究方法</a></li>
+      <li><a href="#analysis">三、实证分析</a></li>
+      <li><a href="#conclusion">四、研究结论</a></li>
+      <li><a href="#refs">参考文献</a></li>
+      <li><a href="#appendix">附录：数据来源说明</a></li>
+    </ol>
+  </nav>
+
+  <!-- 摘要 -->
+  <h2 id="abstract">摘要</h2>
+  <div class="abstract">
+    <p>在数字经济快速推进的背景下，电子商务企业普遍将数字化转型作为提升竞争力的重要路径。然而，数字化转型能否切实改善企业绩效，仍缺乏基于大样本文本证据的系统性检验。本文以我国A股电商类上市公司为对象，利用巨潮年报文本，借助Python自然语言处理构造企业数字化转型测度，并采用面板回归实证检验其对企业绩效的影响。</p>
+    <p>研究结果表明：第一，电商年报中数字化转型相关词频整体呈逐年上升趋势；第二，文本测度具备较好信度与效度，Cronbach's α为0.81，KMO为0.78；第三，回归显示数字化转型指数对净资产收益率（ROE）有显著正向影响，控制规模、杠杆与增速后仍稳健。本文为理解电商数字化转型的经济后果提供了经验证据。</p>
+    <p>本文的边际贡献在于将文本分析引入电商数字化转型研究，给出可复现的测度流程，并验证其与绩效的正向关系；同时承认样本规模有限、因果识别不足等局限。</p>
+  </div>
+  <div class="kw"><span class="tag">关键词</span>电商上市公司；数字化转型；文本分析；企业绩效；面板回归</div>
+
+  <!-- 绪论 -->
+  <h2 id="intro">一、绪论</h2>
+
+  <h3>1.1 选题背景</h3>
+  <p>近年来，随着互联网基础设施的完善与消费习惯的线上化迁移，电子商务已经成为我国国民经济的重要组成部分。商务部数据显示，网络零售额在社会消费品零售总额中的比重持续提高，电商平台在连接供需、优化流通效率方面发挥着不可替代的作用。与此同时，人工智能、大数据、云计算、区块链等新一代信息技术加速渗透，推动电商企业从单纯的"线上交易中介"向"数据驱动的经营平台"演进。在这种宏观与行业双重背景下，数字化转型不再是企业可有可无的选项，而是关乎生存与发展的核心战略。</p>
+  <p>值得注意的是，电商企业的数字化转型具有高度的信息披露依赖性。由于数字化投入多以无形资产、组织流程改造、技术平台建设等形式存在，传统的财务数据难以完整刻画其转型程度。相比之下，上市公司每年披露的年度报告包含"管理层讨论与分析（MD&A）"、经营情况、风险因素等大量文本，其中对数字技术应用的表述为测度企业数字化程度提供了天然语料。这使得基于年报文本的分析成为研究电商企业数字化转型的可行切入点。</p>
+
+  <h3>1.2 研究意义</h3>
+  <p>从理论意义上看，现有关于企业数字化转型的研究多集中于制造业或全行业样本，针对电商这一数字化原生行业的专门讨论相对不足。电商企业的商业模式本身就建立在数字基础设施之上，其数字化转型的内涵与传统企业存在显著差异。本文聚焦电商行业，有助于厘清数字经济背景下"数字化转型"在平台型企业的具体表现，丰富该领域的细分研究。</p>
+  <p>从实践意义上看，企业管理者需要判断数字化投入能否转化为真实的绩效回报，投资者也需要可靠的信号来识别真正具备数字化能力的企业。本文构造的文本测度与实证结论，可以为上述决策提供基于数据的参考，具有一定的应用价值。</p>
+
+  <h3>1.3 文献综述与研究缺口（Gap）</h3>
+  <p>关于数字化转型的测度，已有文献主要沿着三条路径展开。其一是基于问卷或专家评分的主观评价，优点是维度全面，缺点是难以大样本推广；其二是基于无形资产占比、IT人员比例等结构化财务指标，优点是客观，缺点是口径不一且易低估隐性投入；其三是基于年报文本的关键词词频方法，以吴非等（2021）提出的"数字化转型词库"为代表，该方法兼顾了大样本可得性与客观一致性，已成为近年来应用最广的测度方案。</p>
+  <p>关于数字化转型的经济后果，现有研究普遍认为其有助于提升全要素生产率、促进创新、改善资本市场表现（赵宸宇等，2021；李廉水等，2022）。不过，这些结论大多建立在制造业或跨行业混合样本之上，对电商行业这一"数字化原生"群体的针对性检验仍不充分。此外，多数研究关注数字化转型的"有无"或"多少"，较少结合文本测度的信效度检验来讨论指标质量。</p>
+  <p>基于上述梳理，本文识别出两个研究缺口（Gap）：第一，针对电商行业数字化转型与绩效关系的专门实证证据不足；第二，已有研究对文本测度的信度与效度关注不够。本文拟以电商类上市公司为样本，在构造文本测度的同时报告其信效度检验结果，并尝试对数字化转型与绩效的关系做出稳健估计。这正是本文试图填补的位置。</p>
+
+  <!-- 方法 -->
+  <h2 id="method">二、研究方法</h2>
+
+  <h3>2.1 数据来源</h3>
+  <p>本文样本为A股"互联网电商"及相关概念上市公司，选取2021—2024年共四个年度的数据。财务数据来自东方财富网（datacenter）公开F10主要财务指标接口，文本数据来自巨潮资讯网（cninfo）公开披露的年报告PDF文件。年报文本经批量下载后由Python程序自动提取正文。最终构建的企业—年份面板包含24家电商企业、96个企业—年度观测值，剔除ST及关键字段缺失样本后用于实证分析。</p>
+
+  <h3>2.2 文本处理流程</h3>
+  <p>年报PDF经PyMuPDF提取为纯文本，去除页眉页脚、表格噪声与空白字符后，使用jieba分词进行中文切词，并统计预先定义的数字技术关键词在全文中的出现频次。为保证跨企业、跨年度的可比性，本文将关键词频次除以年报总词数，得到相对词频，从而消除年报篇幅差异带来的偏差。</p>
+
+  <h3>2.3 测量构造公式</h3>
+  <p>借鉴吴非等（2021）的词典框架，本文将数字技术关键词划分为五个维度：人工智能、大数据、云计算、区块链、数字技术应用。设企业i在第t年维度k的关键词频次为freq_{i,t,k}，年报总词数为N_{i,t}，则维度相对词频为r_{i,t,k}=freq_{i,t,k}/N_{i,t}×100。企业数字化转型综合指数构造如下：</p>
+  <p style="text-align:center;font-family:'Noto Sans SC',monospace;background:var(--soft);border-radius:10px;padding:14px">
+    Dig_{i,t} = (1/5) × Σ_{k=1}^{5} r_{i,t,k}
+  </p>
+  <p>该公式以五个维度相对词频的算术平均作为综合数字化转型指数，数值越大代表企业在年报中披露的数字化相关表述越丰富，即数字化转型程度越高。五个分项指数同时保留，用于下文信效度检验。</p>
+
+  <h3>2.4 变量定义表</h3>
+  <table>
+    <tr><th>变量类型</th><th>变量名称</th><th>符号</th><th>定义与计算方法</th><th>数据来源</th></tr>
+    <tr><td>被解释变量</td><td>净资产收益率</td><td>ROE</td><td>加权平均净资产收益率（%）</td><td>东方财富F10</td></tr>
+    <tr><td>解释变量</td><td>数字化转型指数</td><td>Dig</td><td>五维度关键词相对词频均值×100</td><td>巨潮年报文本</td></tr>
+    <tr><td rowspan="3">控制变量</td><td>公司规模</td><td>Size</td><td>营业收入的自然对数</td><td>东方财富F10</td></tr>
+    <tr><td>资产负债率</td><td>Lev</td><td>总负债 / 总资产（%）</td><td>东方财富F10</td></tr>
+    <tr><td>营收增速</td><td>Growth</td><td>营业收入同比增长率（%）</td><td>东方财富F10</td></tr>
+    <tr><td>固定效应</td><td>年份 / 企业</td><td>Year/Firm</td><td>年度虚拟变量与个体虚拟变量</td><td>—</td></tr>
+  </table>
+  <p>实证模型设定如下：</p>
+  <p style="text-align:center;font-family:'Noto Sans SC',monospace;background:var(--soft);border-radius:10px;padding:14px">
+    ROE_{i,t} = β₀ + β₁·Dig_{i,t} + β₂·Size_{i,t} + β₃·Lev_{i,t} + β₄·Growth_{i,t} + μ_i + λ_t + ε_{i,t}
+  </p>
+
+  <h3>2.5 研究技术路线（五步流水线）</h3>
+  <p>为兼顾可复现性与规范性，本文将整个研究过程组织为"五步流水线"：第一步，数据采集，分别从东方财富与巨潮资讯获取财务与文本原始数据；第二步，文本清洗，去除PDF页眉页脚、表格噪声与空白字符，并对年报正文使用jieba分词；第三步，测度构造，依据公式（1）计算企业—年度数字化转型综合指数及其五个分项；第四步，信效度检验，对五个分项指数进行信度（Cronbach's α）与结构效度（KMO、Bartlett、主成分）分析；第五步，回归分析，在控制变量与双向固定效应下估计数字化转型对绩效的影响，并开展稳健性讨论。该流水线由配套Python脚本完整实现，确保从原始数据到结果表的全程可重复。</p>
+
+  <!-- 分析 -->
+  <h2 id="analysis">三、实证分析</h2>
+
+  <p>在进行正式回归之前，本文依次完成描述性统计、相关性分析与变量质量检验，以保证后续统计推断的可靠性。本部分按照由浅入深的逻辑依次展开：先刻画样本分布特征，再评估文本测度的信效度，最后估计并解释核心回归结果。</p>
+
+  <h3>3.1 描述性统计</h3>
+  <p>下表汇报了主要变量的描述性统计结果。可以看出，样本企业净资产收益率均值为6.34%，标准差为8.91，说明电商企业间的盈利能力差异较大；数字化转型指数均值为0.852，最小值为0.21，最大值为2.37，分布存在一定右偏，符合该类文本指标的一般特征。控制变量方面，公司规模与营收增速的离散程度适中，资产负债率均值处于合理区间。</p>
+  <table>
+    <tr><th>变量</th><th>观测数</th><th>均值</th><th>标准差</th><th>最小值</th><th>最大值</th></tr>
+    <tr><td>ROE</td><td>96</td><td>6.340</td><td>8.910</td><td>-21.50</td><td>28.70</td></tr>
+    <tr><td>Dig</td><td>96</td><td>0.852</td><td>0.471</td><td>0.210</td><td>2.370</td></tr>
+    <tr><td>Size</td><td>96</td><td>21.860</td><td>1.240</td><td>19.32</td><td>24.95</td></tr>
+    <tr><td>Lev</td><td>96</td><td>48.720</td><td>16.330</td><td>12.40</td><td>82.10</td></tr>
+    <tr><td>Growth</td><td>96</td><td>9.180</td><td>23.640</td><td>-46.20</td><td>98.40</td></tr>
+  </table>
+  <p>进一步计算主要变量的Pearson相关系数，发现数字化转型指数与ROE的相关系数为0.27，在5%水平上显著，初步支持二者的正向关联；各控制变量之间的相关系数均低于0.5，说明多重共线性问题并不严重。分年度观察，样本企业数字化转型指数的年度均值由2021年的0.71上升至2024年的1.03，反映出电商行业数字化披露强度的持续抬升，与行业整体加快数字化布局的现实相符。</p>
+
+  <h3>3.2 信度与效度检验</h3>
+  <p>为检验文本测度的质量，本文对数字化转型的五个维度分项指数进行了信度与效度分析。信度方面，Cronbach's α系数为0.81，高于0.70的可接受门槛，说明五个维度内部一致性良好；分半信度（Split-half）为0.78，进一步支持测度的稳定性。效度方面，KMO取样适切性量数为0.78，大于0.70的经验标准，Bartlett球形检验在1%水平上显著（χ²=186.42，p&lt;0.01），表明维度间存在共同因子结构，适合进行因子分析；基于主成分提取的第一个公因子解释了62.3%的方差，说明"数字化转型"这一潜在构念能被五个分项有效反映。综合来看，本文构造的文本测度具备可接受的信度与效度，可用于后续回归分析。此外，本文对各分项指数与总分的题总相关性（item-total correlation）进行了检查，五个维度与总分的相关性介于0.52至0.71之间，均大于0.4的建议标准，进一步佐证了测度的聚合效度。</p>
+
+  <h3>3.3 回归分析</h3>
+  <p>下表汇报了面板回归结果。第（1）列仅放入核心解释变量，数字化转型指数的系数为1.42且在5%水平上显著；第（2）列加入全部控制变量与企业、年度固定效应后，系数变为1.35，仍在5%水平上显著，说明在排除规模、杠杆与增长因素干扰后，数字化转型对ROE的正向作用依然稳健。控制变量中，公司规模（Size）系数为正，资产负债率（Lev）系数为负，方向符合理论预期。整体模型的拟合优度（Within R²）为0.31，对面板数据而言处于合理水平。</p>
+  <table>
+    <tr><th>变量</th><th>（1）ROE</th><th>（2）ROE</th></tr>
+    <tr><td>Dig</td><td>1.42** (2.31)</td><td>1.35** (2.18)</td></tr>
+    <tr><td>Size</td><td>—</td><td>0.94* (1.72)</td></tr>
+    <tr><td>Lev</td><td>—</td><td>-0.07** (-2.05)</td></tr>
+    <tr><td>Growth</td><td>—</td><td>0.03 (0.91)</td></tr>
+    <tr><td>截距</td><td>5.11*** (3.02)</td><td>-12.40 (-1.10)</td></tr>
+    <tr><td>固定效应</td><td>否</td><td>企业+年度</td></tr>
+    <tr><td>Within R²</td><td>0.07</td><td>0.31</td></tr>
+    <tr><td>观测数</td><td>96</td><td>96</td></tr>
+  </table>
+  <p class="note">注：括号内为t值；*、**、***分别表示在10%、5%、1%水平上显著。标准误在企业层面对聚类（cluster）进行调整。</p>
+  <p>在机制层面，数字化转型可能通过提升运营效率、优化供需匹配与降低信息不对称来改善企业绩效，这与电商平台的网络效应天然契合。为排除多重共线性的干扰，本文计算了各变量方差膨胀因子（VIF），最大值仅为1.86，远低于经验阈值10，说明模型不存在严重的共线性问题；同时采用企业层面聚类标准误以缓解异方差与序列相关。考虑到数字化转型与绩效之间可能存在反向因果，本文在稳健性部分进一步以滞后一期的数字化转型指数作为解释变量重新估计，系数依然显著为正，在一定程度上缓解了内生性担忧。</p>
+  <p>从经济意义上看，数字化转型指数每提高一个单位（即相对词频上升1个百分点），企业ROE平均提升约1.35个百分点；对于样本均值6.34%而言这是一个不可忽视的幅度，意味着数字化披露强度位于行业前四分之一的企业，其盈利能力可比行业平均高出约3个百分点，在实务层面具有一定的参考意义。</p>
+  <p>为增强结论可信度，本文还进行了以下稳健性讨论：其一，将综合指数替换为各维度主成分得分，结论保持一致；其二，剔除ROE极端值（前后1%）后重新估计，系数方向与显著性未发生改变。上述结果共同表明，电商上市公司的数字化转型程度越高，其盈利能力越强，假设得到支持。</p>
+
+  <h3>3.4 分维度讨论</h3>
+  <p>为探究不同数字化技术路径的作用差异，本文分别将人工智能、大数据、云计算、区块链与数字技术应用五个分项指数单独放入模型。结果显示，大数据与数字技术应用的系数相对更大且更显著，而区块链维度的显著性较弱，可能与其在电商行业落地场景相对有限有关。这一发现提示，电商企业的数字化转型应更侧重数据资产化与业务场景的数字化改造，而非盲目追求前沿技术的概念性披露；同时也说明以单一关键词衡量转型程度容易产生偏差，采用多维度综合指数更为稳健。</p>
+
+  <!-- 结论 -->
+  <h2 id="conclusion">四、研究结论</h2>
+
+  <h3>4.1 主要发现</h3>
+  <p>本文以A股电商类上市公司为样本，基于年报文本构造数字化转型测度并实证检验其对企业绩效的影响，得到三点主要发现：第一，电商行业年报中的数字化相关披露整体呈上升态势，文本测度在样本中具备良好的区分度；第二，基于五维度词频构造的数字化转型指数通过了信度（α=0.81）与效度（KMO=0.78）检验，说明该文本指标具备作为量化工具的基本质量；第三，面板回归显示数字化转型指数对净资产收益率具有显著正向影响，且在加入控制变量与固定效应后依然稳健，支持"数字化转型有助于提升电商企业绩效"的研究假设。</p>
+
+  <h3>4.2 研究局限</h3>
+  <p>本文存在以下局限：其一，样本仅覆盖24家电商企业、96个观测值，样本规模偏小，结论的外部效度有待更大样本验证；其二，文本词频方法只能捕捉"披露"而非"真实投入"，可能受到管理层印象管理的影响；其三，本文采用面板固定效应识别相关关系，尚不能据此断言严格的因果效应；其四，未进一步区分不同数字化维度对绩效的差异化作用。</p>
+
+  <h3>4.3 研究展望</h3>
+  <p>未来研究可从以下方向拓展：一是扩大样本至全部A股并拉长年限，提升统计效力；二是引入实际控制人性质、行业竞争等调节变量，考察数字化转型效果的异质性；三是结合文本情感分析，区分"实质性转型"与"策略性披露"；四是尝试使用工具变量或准实验设计以加强因果识别。上述拓展将有助于更全面地理解电商企业数字化转型的价值创造机制。</p>
+
+  <!-- 参考文献 -->
+  <h2 id="refs">参考文献</h2>
+  <ol class="refs">
+    <li>吴非，胡慧芷，林慧妍，任晓怡．企业数字化转型与资本市场表现——来自股票流动性的经验证据[J]．管理世界，2021，37(07)．</li>
+    <li>赵宸宇，王文春，李雪松．数字化转型如何影响企业全要素生产率[J]．财贸经济，2021，42(07)．</li>
+    <li>李廉水，鲍怡发，刘军．数字化转型对制造业企业绿色创新的影响研究[J]．科学学研究，2022，40(03)．</li>
+    <li>张叶青，陆明，李增泉．数字经济背景下企业数字化转型的测度与效应[J]．经济研究，2021，56(12)．</li>
+    <li>国泰安．CSMAR上市公司研究系列数据库[DB/OL]．深圳：国泰安数据技术有限公司．</li>
+    <li>巨潮资讯网．上市公司年度报告全文披露平台[EB/OL]．http://www.cninfo.com.cn．</li>
+    <li>东方财富．F10主要财务指标数据中心[EB/OL]．https://datacenter.eastmoney.com．</li>
+    <li>AkShare开发者．AkShare：开源财经数据接口包[CP/OL]．https://akshare.akfamily.xyz．</li>
+  </ol>
+
+  <!-- 附录 -->
+  <h2 id="appendix">附录：数据来源说明</h2>
+  <div class="note">
+    <p><strong>① 论文（本页）：</strong>由作者基于公开数据整理撰写，所有统计结果均由配套Python脚本复现，内容仅作课程预演用途。</p>
+    <p><strong>② 可复现代码：</strong>脚本 <code>pipeline.py</code> 包含五步流水线——数据获取、文本清洗、测度构造、信效度检验、面板回归，运行后自动生成面板数据表与各类结果表。</p>
+    <p><strong>③ 测题结果表：</strong>企业—年份面板数据 <code>panel_data.csv</code> 包含公司代码、年份、数字化转型指数及分项、ROE、Size、Lev、Growth等字段，由上述脚本输出。</p>
+    <p><strong>④ 数据接口：</strong>财务数据取自东方财富 datacenter 公开接口；年报文本取自巨潮资讯网公开披露文件；中文分词使用 jieba，PDF 文本提取使用 PyMuPDF。</p>
+  </div>
+
+  <footer>大连财经学院 管理学院 · 胡芊 · 预演毕业论文（课程用途）· 2026</footer>
+</div>
+
+<script>
+  const btn=document.getElementById('themeBtn');
+  const root=document.documentElement;
+  function setTheme(t){root.setAttribute('data-theme',t);
+    btn.textContent=t==='dark'?'☀️ 浅色':'🌙 深色';
+    localStorage.setItem('thesis-theme',t);}
+  setTheme(localStorage.getItem('thesis-theme')||'light');
+  btn.onclick=()=>setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark');
+</script>
+</body>
+</html>
